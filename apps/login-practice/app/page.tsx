@@ -1,11 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent } from 'react';
 
 export default function Page() {
   const [email, setEmail] = useState('sample@email.com');
   const [password, setPassword] = useState('samplepassword0123');
-
+  const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    console.log(email);
+  };
   return (
     <form>
       <h1>メール送信アプリ！</h1>
