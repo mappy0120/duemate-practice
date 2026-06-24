@@ -7,7 +7,7 @@ export default function Page() {
   const [password, setPassword] = useState('samplepassword0123');
   const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    console.log(email);
+    console.log(e.target.value);
   };
   return (
     <form>
