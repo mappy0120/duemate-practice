@@ -1,3 +1,5 @@
+// mail入力するアプリを作成
+
 'use client';
 
 import { useState, ChangeEvent } from 'react';
