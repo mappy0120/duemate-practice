@@ -7,12 +7,17 @@ import { useState, ChangeEvent } from 'react';
 export default function Page() {
   const [email, setEmail] = useState('');
 
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    alert('フォームが送信されました');
+  }
+
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
     console.log(e.target.value);
   };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h1>メール送信アプリ！</h1>
       <h2>※メールを送信するだけのアプリです。</h2>
 
